@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>躲避游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+    <div class="health">生命值: <span id="health">20</span></div>
+    <div class="survival-time">存活时间: <span id="survivalTime">0s</span></div>
+</div>
+        <canvas id="gameCanvas"></canvas>
+<audio id="backgroundMusic" loop preload="auto">
+  <source src="LEVEL.mp3" type="audio/mpeg">
+</audio>
+        <div class="game-over" id="gameOver">
+            <h2>游戏结束</h2>
+            <p>最终得分: <span id="finalScore">0</span></p>
+        <p>存活时间: <span id="finalSurvivalTime">0s</span></p>
+        <p>评价: <span id="rankComment"></span></p>
+            <button onclick="restartGame()">重新开始</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
